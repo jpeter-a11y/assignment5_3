@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Interactive Calculator</title>
+</head>
+<body>
+
+<h2>Interactive Calculator</h2>
+
+<input type="number" id="n1" placeholder="Enter number">
+
+<select id="op">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+
+<input type="number" id="n2" placeholder="Enter number">
+
+<button onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calc() {
+    var a = Number(document.getElementById("n1").value);
+    var b = Number(document.getElementById("n2").value);
+    var op = document.getElementById("op").value;
+    var res;
+
+    if (op == "+")
+        res = a + b;
+    else if (op == "-")
+        res = a - b;
+    else if (op == "*")
+        res = a * b;
+    else
+        res = a / b;
+
+    document.getElementById("result").innerHTML = "Result: " + res;
+}
+</script>
+
+</body>
+</html>
